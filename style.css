@@ -30,7 +30,7 @@
 }
 
 
-/* GRID */
+/* ---- GRID ---- */
 .manga-grid {
     display: grid;
     grid-template-columns: repeat(5, 1fr);
@@ -68,3 +68,5 @@
     grid-column: 5;
     grid-row: 1;
 }
+
+/* ---- fin GRID ---- */

@@ -1,0 +1,70 @@
+/* esto me hace falta para debugging */
+.border {
+
+    border: 2px solid black;
+    border-radius: 25px;
+    margin-bottom: 5px;
+}
+
+/* comportamiento de los cards para los mangas */
+.manga-card {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    height: 400px;
+    width: 300px;
+    margin: 10px;
+    border-radius: 25px;
+    transition: transform 300ms;
+    background-color: blue;
+}
+
+.manga-card:hover {
+    transform: scale(0.95)
+}
+
+.manga-card:active {
+    transform: scale(0.90);
+    /* background-color: royalblue; */
+}
+
+
+/* GRID */
+.manga-grid {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-gap: 10px;
+    grid-auto-rows: minmax(100px, auto);
+    justify-items: center;
+}
+
+.one {
+
+    grid-column: 1;
+    grid-row: 1;
+}
+
+.two {
+
+    grid-column: 2;
+    grid-row: 1;
+}
+
+.three {
+
+    grid-column: 3;
+    grid-row: 1;
+}
+
+.four {
+
+    grid-column: 4;
+    grid-row: 1;
+}
+
+.five {
+
+    grid-column: 5;
+    grid-row: 1;
+}

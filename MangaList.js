@@ -1,21 +1,17 @@
-async function getMangas() {
+async function getMangas(q) {
     try {
-        const response = await fetch("https://api.myanimelist.net/v2/manga?q=berserk", {
+        const response = await fetch(`http://localhost:3000/mangaList?q=${encodeURIComponent(q)}`, {
             method: "GET",
-            withCredentials: true,
-            headers: {
-                "X-MAL-CLIENT-ID": "455bf80d11fb98bc72f17c27afd1c6b3",
-                "Content-Type": "application/json"
-            }
         })
         if (!response.ok) {
-            throw new Error("HTTP error", response.status)
+            throw new Error(`HTTP error: ${response.status}`)
         }
-        console.log(response)
+        const data = await response.json();
+        console.log(data);
     }
     catch (error) {
-        console.error("fetch error: ", error)
+        console.error(`fetch error: ${error}`)
     }
 }
 
-getMangas();
+getMangas("naruto");

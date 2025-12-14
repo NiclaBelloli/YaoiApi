@@ -7,6 +7,7 @@ router.get('/', async function (req, res, next) {
         const {q} = req.query;
         if (!q){
             res.status(400).send("Bad Request: Missing or Invalid Search Parameter")
+            return;
         }
         const response = await fetch(`https://api.myanimelist.net/v2/manga?q=${encodeURIComponent(q)}`, {
             method: "GET",

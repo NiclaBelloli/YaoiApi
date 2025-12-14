@@ -6,7 +6,7 @@
 
 ### navigate to the backApiRest
 
-``` cd backApiRest ```
+``` cd YaoiApi/backApiRest ```
 
 ### install the dependencies
 

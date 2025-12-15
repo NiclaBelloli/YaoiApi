@@ -1,17 +1,29 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
     <title>title</title>
 </head>
+
 <body style="background-color: bisque;">
     <div id="header-container" class="border" style="background-color: pink; ">
         <h1 style="font-size:70px">Yaoi</h1>
     </div>
-    <div style="background-color: cyan; margin-bottom:5px; height:100vh; border-radius:25px; border: 2px solid black" id="main-container">
-        <div class="manga-grid">
+    <div class="search-container">
+        <div class="input-container">
+            <input type="text" class="input-search-manga">
+        </div>
+        <div class="filter-options-container">
+            filter-options
+        </div>
+    </div>
+    <div style="background-color: cyan; margin-bottom:5px; border-radius:25px; border: 2px solid black"
+        id="main-container">
+        <!-- ---- POC CARDS -->
+        <!-- <div class="manga-grid">
             <div class="one manga-card">soy un manga</div>
             <div class="two manga-card">soy un manga</div>
             <div class="three manga-card">soy un manga</div>
@@ -24,7 +36,11 @@
             <div class="three manga-card">soy un manga</div>
             <div class="four manga-card">soy un manga</div>
             <div class="five manga-card">soy un manga</div>
-        </div>
+        </div> -->
+
+        <div class="manga-grid">
+             <!-- NICLA ESTE TIENE QUE ESTAR VACIO ES PARA RELLENARSE DINAMICAMENTE CON LAS BUSQUEDAS LUEGO PENSAREMOS EN UN PLACEHOLDER -->
+         </div>
     </div>
     <div id="footer-container" style="background-color:cornsilk; border-radius:25px; border: 2px solid black">
         <h3 style="text-align: center;">Hecho por Danny y Nicla</h3>
@@ -35,4 +51,5 @@
 <!-- scripts -->
 
 <script src="MangaList.js"></script>
+
 </html>

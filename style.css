@@ -9,6 +9,7 @@
 /* comportamiento de los cards para los mangas */
 .manga-card {
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     color: white;
@@ -29,17 +30,25 @@
     /* background-color: royalblue; */
 }
 
+/* ---- FLEX ---- */
+.manga-grid{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
 
 /* ---- GRID ---- */
-.manga-grid {
+/* .manga-grid {
     display: grid;
     grid-template-columns: repeat(5, 1fr);
     grid-gap: 10px;
     grid-auto-rows: minmax(100px, auto);
     justify-items: center;
-}
+} */
 
-.one {
+/* .one {
 
     grid-column: 1;
     grid-row: 1;
@@ -67,6 +76,33 @@
 
     grid-column: 5;
     grid-row: 1;
-}
+} */
 
 /* ---- fin GRID ---- */
+
+.input-search-manga {
+    width: 500px;
+    height: 30px;
+    font-size: 20px;
+    border-radius: 25px;
+    padding-left: 10px;
+}
+
+.input-container {
+    border-radius: 25px;
+    padding: 5px;
+    display:inline-block;
+}
+
+.search-container{
+    display: flex;
+    align-items:center;
+    background-color: lightcoral;
+    border-radius:25px;
+    margin-bottom: 5px;
+    border: 2px solid black;
+}
+
+.filter-options-container{
+    /* estilos del contendor de filtros :)) */
+}

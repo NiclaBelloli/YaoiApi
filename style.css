@@ -1,9 +1,33 @@
 /* esto me hace falta para debugging */
-.border {
-
-    border: 2px solid black;
+.contenedor  {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 10px solid rgb(126, 121, 194);
     border-radius: 25px;
-    margin-bottom: 5px;
+   gap: 125px;
+    
+}
+.carusel-contenedor  {
+    height: 300px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 10px solid rgb(126, 121, 194);
+    border-radius: 25px;
+    margin-top: auto;
+}
+.carusel-track{
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+.header-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    margin-bottom: 10px;
 }
 
 /* comportamiento de los cards para los mangas */
@@ -18,7 +42,7 @@
     margin: 10px;
     border-radius: 25px;
     transition: transform 300ms;
-    background-color: blue;
+    background-color: rgb(203, 128, 231);
 }
 
 .manga-card:hover {
@@ -81,7 +105,7 @@
 /* ---- fin GRID ---- */
 
 .input-search-manga {
-    width: 500px;
+    width: 600px;
     height: 30px;
     font-size: 20px;
     border-radius: 25px;
@@ -89,20 +113,72 @@
 }
 
 .input-container {
+    display: flex;
+    align-items:center;
     border-radius: 25px;
     padding: 5px;
-    display:inline-block;
 }
 
 .search-container{
     display: flex;
     align-items:center;
-    background-color: lightcoral;
+    background-color: rgb(233, 151, 247);
     border-radius:25px;
     margin-bottom: 5px;
     border: 2px solid black;
 }
+.titulo{
+    font-size: 100px;
+    margin-top: 3px;
+    margin-bottom: 3px;
+    font-style: Lobster, serif;
+    font-family: 'Lobster', serif;
+    color: rgb(247, 239, 248);
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: rgb(97, 57, 116);
+}
+
+
+.recomendados{
+    font-size: 30px;
+    font-style: Lobster, serif;
+    font-family: 'Lobster', serif;
+    color: rgb(97, 57, 116);
+    margin-top: 300px;
+    margin-bottom: auto;
+    
+}
+
+.Logo{
+    height: 100px;
+    width: 100px;
+    margin-left: 165px;
+    
+}
+
 
 .filter-options-container{
     /* estilos del contendor de filtros :)) */
+}
+.Anterior{
+    height: 50px; ;
+     width: 50px;
+  margin-left: 0;
+  margin-right: auto;
+  background-color: rgba(255, 255, 255, 0.596);
+  border-radius: 10px;
+}
+.Siguiente{
+    height: 50px; ;
+     width: 50px;
+  margin-left: auto;
+  margin-right: 0;
+  background-color: rgba(255, 255, 255, 0.596);
+  border-radius: 10px;
+}
+.Anterior:hover{
+    transform: scale(0.95)
+}
+.Siguiente:hover{
+    transform: scale(0.95)
 }

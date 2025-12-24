@@ -1,14 +1,15 @@
 /* esto me hace falta para debugging */
-.contenedor  {
+.contenedor {
     display: flex;
     justify-content: center;
     align-items: center;
     border: 10px solid rgb(126, 121, 194);
     border-radius: 25px;
-   gap: 125px;
-    
+    gap: 125px;
+
 }
-.carusel-contenedor  {
+
+.carusel-contenedor {
     height: 300px;
     display: flex;
     justify-content: center;
@@ -17,10 +18,12 @@
     border-radius: 25px;
     margin-top: auto;
 }
-.carusel-track{
+
+.carusel-track {
     display: flex;
     transition: transform 0.5s ease-in-out;
 }
+
 .header-container {
     display: flex;
     flex-direction: column;
@@ -55,7 +58,7 @@
 }
 
 /* ---- FLEX ---- */
-.manga-grid{
+.manga-grid {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-evenly;
@@ -114,20 +117,21 @@
 
 .input-container {
     display: flex;
-    align-items:center;
+    align-items: center;
     border-radius: 25px;
     padding: 5px;
 }
 
-.search-container{
+.search-container {
     display: flex;
-    align-items:center;
+    align-items: center;
     background-color: rgb(233, 151, 247);
-    border-radius:25px;
+    border-radius: 25px;
     margin-bottom: 5px;
     border: 2px solid black;
 }
-.titulo{
+
+.titulo {
     font-size: 100px;
     margin-top: 3px;
     margin-bottom: 3px;
@@ -139,46 +143,71 @@
 }
 
 
-.recomendados{
+.recomendados {
     font-size: 30px;
     font-style: Lobster, serif;
     font-family: 'Lobster', serif;
     color: rgb(97, 57, 116);
     margin-top: 300px;
     margin-bottom: auto;
-    
+
 }
 
-.Logo{
+.Logo {
     height: 100px;
     width: 100px;
     margin-left: 165px;
-    
+    animation: rotate 500ms linear alternate;
 }
 
+.Anterior {
+    height: 50px;
+    ;
+    width: 50px;
+    margin-left: 0;
+    margin-right: auto;
+    background-color: rgba(255, 255, 255, 0.596);
+    border-radius: 10px;
+}
 
-.filter-options-container{
-    /* estilos del contendor de filtros :)) */
+.Siguiente {
+    height: 50px;
+    ;
+    width: 50px;
+    margin-left: auto;
+    margin-right: 0;
+    background-color: rgba(255, 255, 255, 0.596);
+    border-radius: 10px;
 }
-.Anterior{
-    height: 50px; ;
-     width: 50px;
-  margin-left: 0;
-  margin-right: auto;
-  background-color: rgba(255, 255, 255, 0.596);
-  border-radius: 10px;
-}
-.Siguiente{
-    height: 50px; ;
-     width: 50px;
-  margin-left: auto;
-  margin-right: 0;
-  background-color: rgba(255, 255, 255, 0.596);
-  border-radius: 10px;
-}
-.Anterior:hover{
+
+.Anterior:hover {
     transform: scale(0.95)
 }
-.Siguiente:hover{
+
+.Siguiente:hover {
     transform: scale(0.95)
 }
+
+@keyframes rotate {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+/* @keyframes jump {
+    0% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-20px);
+    }
+    100% {
+        transform: translateY(0);
+        
+    }
+} 
+    */

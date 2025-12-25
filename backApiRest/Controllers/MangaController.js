@@ -15,3 +15,14 @@ exports.manga_insert = async (req, res) => {
         res.status(500).json({ error: 'Internal Server Error' });
     }
 }
+
+exports.manga_search = async (req, res) => {
+    try {
+        const { q } = req.query;
+        const mangas = await Manga.find({ title: new RegExp(q, 'i') });
+        res.status(200).json(mangas);
+    } catch (err) {
+        console.error('Error searching mangas:', err);
+        res.status(500).json({ error: 'Internal Server Error' });
+    }
+}

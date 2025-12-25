@@ -18,5 +18,6 @@ router.get('/', async function (req, res, next) {
 });
 
 router.post('/add-manga', manga_controller.manga_insert);
+router.get('/manga-query', manga_controller.manga_search);
 
 module.exports = router;

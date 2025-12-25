@@ -3,7 +3,7 @@ const mangaContainer = document.querySelector('.manga-grid');
 
 async function fetchMangas(q) {
     try {
-        const response = await fetch(`http://localhost:3000/manga-query?q=${encodeURIComponent(q)}`, {
+        const response = await fetch(`http://localhost:3000/MangaList/manga-query?q=${encodeURIComponent(q)}`, {
             method: "GET",
         })
         if (!response.ok) {
@@ -27,7 +27,7 @@ async function fetchMangas(q) {
 
 async function getMangas(q) {
     try {
-        const response = await fetch(`http://localhost:3000/mangaList?q=${encodeURIComponent(q)}`, {
+        const response = await fetch(`http://localhost:3000/mangaList/manga-request?q=${encodeURIComponent(q)}`, {
             method: "GET",
         })
         if (!response.ok) {

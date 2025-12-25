@@ -1,31 +1,23 @@
 var express = require('express');
 var router = express.Router();
+const Manga = require('../Models/Manga');
+const mongoose = require('mongoose');
+const manga_controller = require('../Controllers/MangaController');
+require('../database.js');
 
 /* GET users listing. */
 router.get('/', async function (req, res, next) {
-    try {
-        const {q} = req.query;
-        if (!q){
-            res.status(400).send("Bad Request: Missing or Invalid Search Parameter")
-            return;
-        }
-        const response = await fetch(`https://api.myanimelist.net/v2/manga?q=${encodeURIComponent(q)}`, {
-            method: "GET",
-            headers: {
-                "X-MAL-CLIENT-ID": "455bf80d11fb98bc72f17c27afd1c6b3",
-                "Content-Type": "application/json"
-            }
-        })
-        if (!response.ok) {
-            throw new Error("HTTP error", response.status)
-        }
-        const data = await response.json();
-        res.json(data);
-    }
-    catch (error) {
-        console.error("fetch error: ", error)
-        res.status(500).send("Internal Server Error");
-    }
+  try {
+    console.log(Manga.collection)
+    const mangas = await Manga.find({});
+    console.log('mangas:', mangas);
+  } catch (err) {
+    console.error('Error loading DB or querying collection:', err);
+  }
 });
+
+router.post('/add-manga', manga_controller.manga_insert);
+router.get('/manga-query', manga_controller.manga_search);
+router.get('/manga-request', manga_controller.manga_request);
 
 module.exports = router;

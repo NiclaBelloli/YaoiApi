@@ -6,3 +6,27 @@ body {
 a {
   color: #00B7FF;
 }
+
+.mucchino {
+  position: fixed;
+  animation: mucchino-spin 10s linear infinite;
+}
+
+@keyframes mucchino-spin {
+    0% {
+        transform: translate(-30px, -30px) rotate(0deg);
+    }
+    25% {
+        transform: translate(calc(90vw - 90%), calc(90vh - 90%)) rotate(72deg);
+    }
+    50% {
+        transform: translate(0px, calc(80vh - 80%)) rotate(144deg);
+    }
+    75% {
+        transform: translate(calc(100vw - 100%), 0px) rotate(288deg);
+    }
+    100% {
+        transform: translate(-30px, -30px) rotate(360deg);
+    }
+}
+  

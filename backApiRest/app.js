@@ -5,6 +5,9 @@ var cookieParser = require('cookie-parser');
 var logger = require('morgan');
 var cors = require('cors');
 var mongoose = require('mongoose');
+const swaggerUi = require('swagger-ui-express');
+const swaggerSpec = require("./swagger");
+
 
 // declare de routes files
 var indexRouter = require('./routes/index');
@@ -14,6 +17,8 @@ var mangaListRouter = require('./routes/MangaList');
 var app = express();
 
 app.use(cors());
+
+app.use('/api-docs', swaggerUi.serve, swaggerUi.setup(swaggerSpec));
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));

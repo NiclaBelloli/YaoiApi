@@ -97,6 +97,6 @@ router.get('/manga-query', manga_controller.manga_search);
 
 router.get('/manga-request', manga_controller.manga_request);
 
-router.post('/add-image', manga_controller.add_image);
+//router.post('/add-image', manga_controller.add_image);
 
 module.exports = router;

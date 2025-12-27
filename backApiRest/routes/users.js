@@ -29,4 +29,6 @@ router.get('/get-users', user_controller.get_users);
 
 router.post('/create-user', user_controller.create_user);
 
+router.post('/login-user', user_controller.login_user);
+
 module.exports = router;

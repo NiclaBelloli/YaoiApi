@@ -7,7 +7,7 @@ var cors = require('cors');
 var mongoose = require('mongoose');
 const swaggerUi = require('swagger-ui-express');
 const swaggerSpec = require("./swagger");
-
+const dotenv = require('dotenv');
 
 // declare de routes files
 var indexRouter = require('./routes/index');
@@ -17,6 +17,8 @@ var mangaListRouter = require('./routes/MangaList');
 var app = express();
 
 app.use(cors());
+
+dotenv.config();
 
 app.use('/api-docs', swaggerUi.serve, swaggerUi.setup(swaggerSpec));
 

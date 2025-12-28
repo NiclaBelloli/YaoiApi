@@ -2,25 +2,34 @@
 
 ### first clone the project
 
-``` git clone https://github.com/NiclaBelloli/YaoiApi ```
+```
+git clone https://github.com/NiclaBelloli/YaoiApi
+```
 
 ### navigate to the backApiRest
 
-``` cd YaoiApi/backApiRest ```
+```
+cd YaoiApi/backApiRest
+```
 
 ### generating the .env
 
-``` cp .env.example .env
+```
+cp .env.example .env
 #then fill in the .env with your secrets
 ```
 
 ### install the dependencies
 
-```npm install ```
+```
+npm install
+```
 
 ### start the project
 
-``` npm start ```
+```
+npm start
+```
 __________________________________________________________________
 
 ## app frontend

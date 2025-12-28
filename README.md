@@ -15,8 +15,7 @@ cd YaoiApi/backApiRest
 ### generating the .env
 
 ```
-cp .env.example .env
-#then fill in the .env with your secrets
+cp .env.example .env #then fill in the .env with your secrets
 ```
 
 ### install the dependencies

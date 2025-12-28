@@ -1,5 +1,6 @@
 const User = require('../Models/User');
 const { decryptData, encryptData } = require('../encryptation');
+const { SignJWT } = require('jsonwebtoken');
 
 exports.get_users = async (req, res) => {
     try {

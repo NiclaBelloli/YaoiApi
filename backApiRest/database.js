@@ -1,5 +1,5 @@
 const mongoose = require('mongoose');
-const uri = "mongodb://admin:secret123@localhost:27017";
+const uri = process.env.MONGODB_URI;
 
 mongoose.connect(uri)
     .then(() => {
